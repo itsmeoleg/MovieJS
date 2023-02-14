@@ -1,3 +1,7 @@
+'use strict';
+
+/* Exercise #1 */
+
 function getMathResult(a, b) {
     if (b <= 0 || typeof(b) !== 'number') {
       return a;
@@ -20,6 +24,8 @@ console.log(getMathResult(3, 3));
 
 
 
+/* Exercise #2 */
+
 let a = '10';
 
 if (typeof(a) === 'number') {
@@ -28,23 +34,60 @@ if (typeof(a) === 'number') {
   console.log('xyi');
 }
 
+/* Exercise #3 */
 
-
-
-
-
-for (let i = 0; i + 1 < b; i++) { 
-  console.log (a * (b - i));
+function sayHello(name) {
+    let phrase = 'Привет, ' + name + '!';
+    return phrase;
 }
 
-console.log()
-
-let a = 2;
-let b = 2;
-
-if (typeof(a) === 'number' && typeof(b) === 'number') {
+sayHello('Oleg');
 
 
-} else if () {
-  console.log(a);
+
+
+
+/* Exercise #4 */
+
+function returnNeighboringNumbers(a) {
+    return [a - 1, a, a + 1];
 }
+
+returnNeighboringNumbers(5);
+
+
+
+
+
+/* let i = 0;
+
+while (i <= 1) {
+
+    const a = prompt('Останій переглянутий фільм?', ''),
+          b = prompt('Ваша оцінка?');
+
+    if ( a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;  
+        console.log('done');
+    } else {
+        console.log('Error');
+        i--;
+    }   
+    i++;  
+} */
+
+/* let i = 0;
+
+do  {
+    const a = prompt('Останій переглянутий фільм?', ''),
+          b = prompt('Ваша оцінка?');
+
+    if ( a != null && b != null && a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;  
+        console.log('done');
+    } else {
+        console.log('Error');
+        i--;
+    } 
+    i++;  
+} while ( i < 2); */
