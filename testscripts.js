@@ -47,7 +47,7 @@ sayHello('Oleg');
 
 
 
-/* Exercise #4 */
+
 
 function returnNeighboringNumbers(a) {
     return [a - 1, a, a + 1];
@@ -56,38 +56,36 @@ function returnNeighboringNumbers(a) {
 returnNeighboringNumbers(5);
 
 
+/* Exercise #5 */
 
+function calculateVolumeAndArea(a) {
+ let phrase = '';
 
-
-/* let i = 0;
-
-while (i <= 1) {
-
-    const a = prompt('Останій переглянутий фільм?', ''),
-          b = prompt('Ваша оцінка?');
-
-    if ( a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;  
-        console.log('done');
+    if (a < 0 || !Number.isInteger(a) || a == '') {
+        return 'При вычислении произошла ошибка';
     } else {
-        console.log('Error');
-        i--;
-    }   
-    i++;  
-} */
+        let cubeVolume = Math.pow(a, 3);
+        let cubeArea = 6 * Math.pow(a, 2);
+        phrase = `Объем куба: ${cubeVolume}, площадь всей поверхности: ${cubeArea}`;
+        return phrase;
+    }
+}
 
-/* let i = 0;
+console.log(calculateVolumeAndArea(3));
 
-do  {
-    const a = prompt('Останій переглянутий фільм?', ''),
-          b = prompt('Ваша оцінка?');
 
-    if ( a != null && b != null && a != '' && b != '' && a.length < 50) {
-        personalMovieDB.movies[a] = b;  
-        console.log('done');
-    } else {
-        console.log('Error');
-        i--;
-    } 
-    i++;  
-} while ( i < 2); */
+/* Exercise #6 */
+
+function getCoupeNumber(a) {
+    let coupeNum;
+        if (a === 0 || a > 36) {
+            return 'Таких місць в вагоні не існує';
+        } else if (!Number.isInteger(a) || a < 0 || a == '') {
+            return 'Помилка. Перевірте правильність введеного номера місця';
+        } else {           
+            let coupeNum = Math.ceil(a / 4);
+            return coupeNum;
+        }
+}
+
+console.log(getCoupeNumber(21));
